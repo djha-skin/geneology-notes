@@ -1,0 +1,17 @@
+
+
+digraph FirstPossibility {
+    label="First Possibility";
+    Self [label="Thompson Morrison"];
+    Father [label="Father Morrison"];
+    Mother [label="Mother Peters"];
+    UncleInLaw [label="Gassaway Peters"];
+    Cousin [label="Oram Peters"];
+    Grandfather [label="Father Peters"];
+    Father -> Self;
+    Mother -> Self;
+    Grandfather -> Mother;
+    Grandfather -> UncleInLaw;
+    UncleInLaw -> Cousin;
+
+}
