@@ -1,17 +1,26 @@
 
 
-digraph FirstPossibility {
-    label="First Possibility";
+graph FromMotherToUncleInLaw {
+    label="From Mother to Uncle-In-Law";
+    node [shape=box];
     Self [label="Thompson Morrison"];
     Father [label="Father Morrison"];
     Mother [label="Mother Peters"];
-    UncleInLaw [label="Gassaway Peters"];
+    Parents [shape=point];
+    Father -- Parents;
+    Mother -- Parents;
+    Parents -- Self;
+    UncleInLaw [label="Gassaway O. Peters"];
     Cousin [label="Oram Peters"];
-    Grandfather [label="Father Peters"];
-    Father -> Self;
-    Mother -> Self;
-    Grandfather -> Mother;
-    Grandfather -> UncleInLaw;
-    UncleInLaw -> Cousin;
-
+    Grandfather [label="George Washington Peters"];
+    Grandmother [label="Anna Eliza McLaughlin"];
+    Grandparents [shape=point];
+    Grandfather -- Grandparents;
+    Grandmother -- Grandparents;
+    Grandparents -- UncleInLaw;
+    CousinParents [shape=point];
+    UncleInLaw -- CousinParents;
+    Aunt [label="Aunt *A*"];
+    Aunt -- CousinParents;
+    CousinParents -- Cousin;
 }
